@@ -25,21 +25,17 @@ namespace Prog_DataAlgo_W1_W24
         static void Main(string[] args)
         {
 
-            // Student List
-            List<Student> students = GenerateStudents(10);
+            CustomList<string> list = new CustomList<string>();
 
-            // Display the generated students
-            foreach (Student student in students)
-            {
-                Console.WriteLine($"{student.Name}: {student.Grade}");
-            }
+            list.Add("Ronda"); // 0
+            list.Add("Monika"); // 1
+            list.Add("Henry"); // 2
 
-            List<Student> studentsWithGrades = AllStudentsWithAGradeHigherThan(students, 70);
+            list.RemoveAt(1);
 
-            foreach (Student student in studentsWithGrades)
-            {
-                Console.WriteLine(student.Name);
-            }
+            list.DisplayInformation();
+
+  
 
         } // main
 
@@ -77,6 +73,23 @@ namespace Prog_DataAlgo_W1_W24
             {
                 Console.WriteLine("That name is not on the list");
             }
+
+            // Student List
+            List<Student> students = GenerateStudents(10);
+
+            // Display the generated students
+            foreach (Student student in students)
+            {
+                Console.WriteLine($"{student.Name}: {student.Grade}");
+            }
+
+            List<Student> studentsWithGrades = AllStudentsWithAGradeHigherThan(students, 70);
+
+            foreach (Student student in studentsWithGrades)
+            {
+                Console.WriteLine(student.Name);
+            }
+
         }
 
         // Contains 
