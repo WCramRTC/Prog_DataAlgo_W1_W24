@@ -34,6 +34,13 @@ namespace Prog_DataAlgo_W1_W24
                 Console.WriteLine($"{student.Name}: {student.Grade}");
             }
 
+            List<Student> studentsWithGrades = AllStudentsWithAGradeHigherThan(students, 70);
+
+            foreach (Student student in studentsWithGrades)
+            {
+                Console.WriteLine(student.Name);
+            }
+
         } // main
 
         // Test Code
@@ -111,6 +118,30 @@ namespace Prog_DataAlgo_W1_W24
 
         //// 3. Search for all stores of a category - List of ints
         //public static List<int> AllStoresOfACategory(string[] storeList, string searchKey);
+
+        // Search for all student with a grade higher than 70
+        public static List<Student> AllStudentsWithAGradeHigherThan(List<Student> list, int grade)
+        {
+            List<Student> tempList = new List<Student>();
+
+            // Loop
+            foreach (Student student in list)
+            {
+                // Compare
+                bool higherThan = student.Grade > grade;
+
+                // Respond
+                if(higherThan)
+                {
+                    tempList.Add(student);
+                }
+
+            }
+
+            // Return
+            return tempList;
+        }
+
 
         //// 4. Search for all stores on a floor - List of Stores
         //public static List<Store> AllStoresOnLevel(Store[] storeList, string searchKey);
