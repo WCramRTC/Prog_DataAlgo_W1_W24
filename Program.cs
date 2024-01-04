@@ -133,9 +133,9 @@ namespace Prog_DataAlgo_W1_W24
         static string GenerateName()
         {
             // Code to generate a random name (you can replace this with your preferred method)
-            string[] names = new string[] { "John", "Jane", "Bob", "Alice", "David", "Emily", ... }; // List of names
-            int randomIndex = new Random().Next(names.Length);
-            return names[randomIndex];
+            string[] nameList = new string[] { "John", "Jane", "Bob", "Alice", "David", "Emily", "Michael", "Emma", "William", "Elizabeth" };
+            int randomIndex = new Random().Next(nameList.Length);
+            return nameList[randomIndex];
         }
 
     } // class
