@@ -25,7 +25,7 @@ namespace Prog_DataAlgo_W1_W24
         static void Main(string[] args)
         {
 
-
+            // Student List
             List<Student> students = GenerateStudents(10);
 
             // Display the generated students
